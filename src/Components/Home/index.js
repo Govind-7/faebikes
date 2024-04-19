@@ -148,11 +148,7 @@ class Home extends Component {
         <ul className="restaurent-bg">
           {restaurentsData.map((item) => (
             <Link to={`/restaurant/${item.id}`}>
-              <li
-                data-testid="restaurant-item"
-                className="single-rest"
-                key={item.id}
-              >
+              <li className="single-rest" key={item.id}>
                 <img
                   className="rest-img"
                   src={item.image_url}
@@ -165,26 +161,18 @@ class Home extends Component {
                     <AiFillStar color="#FFCC00" size="20" />
                     {item.user_rating.rating}
                   </p>
-                  <h1>{item.user_rating.total_reviews} ratings</h1>
+                  <h5>{item.user_rating.total_reviews} ratings</h5>
                 </div>
               </li>
             </Link>
           ))}
         </ul>
         <div className="buts-inc-dic">
-          <button
-            data-testid="pagination-left-button"
-            onClick={this.dicr}
-            type="button"
-          >
+          <button onClick={this.dicr} type="button">
             &lt;
           </button>
-          <span data-testid="active-page-number">{s} 0f 4</span>
-          <button
-            data-testid="pagination-right-button"
-            onClick={this.incr}
-            type="button"
-          >
+          <span>{s} 0f 4</span>
+          <button onClick={this.incr} type="button">
             &gt;
           </button>
         </div>
@@ -228,7 +216,7 @@ class Home extends Component {
                   day happy...
                 </p>
                 <MdSort />
-                <p>Sort By</p>
+                <p className="home-sortby">Sort By</p>
 
                 <select
                   value={sortBy}

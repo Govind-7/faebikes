@@ -56,7 +56,7 @@ class Cart extends Component {
 
                   <Link to="/">
                     <button
-                      className="notfound-home-but"
+                      className="header-button"
                       onClick={this.goHomePage}
                       type="button"
                     >
@@ -76,28 +76,23 @@ class Cart extends Component {
                 <ul>
                   {lclList.map((item) => (
                     <li>
-                      <div
-                        data-testid="cartItem"
-                        key={item.id}
-                        className="cart-heading-align"
-                      >
+                      <div key={item.id} className="cart-heading-align">
                         <div className="cart-name-spl">
                           <img
                             alt={item.name}
                             className="cart-item-size"
                             src={item.imageUrl}
                           />
-                          <h1>{item.name}</h1>
+                          <h4 className="mobile_view-font-size">{item.name}</h4>
                         </div>
                         <div className="cart-name-spl">
                           <button
-                            data-testid="decrement-quantity"
                             onClick={() => decrement(item.id)}
                             type="button"
                           >
                             -
                           </button>
-                          <p data-testid="item-quantity">{item.quantity}</p>
+                          <p>{item.quantity}</p>
                           <button
                             data-testid="increment-quantity"
                             onClick={() => increment(item.id)}
@@ -116,11 +111,11 @@ class Cart extends Component {
                 <div className="cart-heading-align">
                   <h1>Order Total:</h1>
 
-                  <p data-testid="total-price">₹{price}.00</p>
+                  <p>₹{price}.00</p>
                 </div>
                 <div className="cart-spl-margin">
                   <button
-                    className="notfound-home-but"
+                    className="header-button"
                     onClick={() => this.placeOrderFunc(emptyCart)}
                     type="button"
                   >
@@ -141,7 +136,7 @@ class Cart extends Component {
                 <br /> Your payment is successfully completed.
               </p>
               <Link to="/">
-                <button className="notfound-home-but" type="button">
+                <button className="header-button" type="button">
                   Go To Home
                 </button>
               </Link>

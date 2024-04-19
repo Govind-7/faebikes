@@ -98,8 +98,10 @@ const RestDetails = () => {
   return (
     <div>
       <Header />
-      {aiFUnction()}
-      <Footer />
+      <div className="rest-details-main-bg">
+        {aiFUnction()}
+        <Footer />
+      </div>
     </div>
   );
 };

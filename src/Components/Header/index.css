@@ -7,6 +7,10 @@
   list-style-type: none;
   padding: 5px;
 }
+.header-logo {
+  width: 30%;
+  border-radius: 10px;
+}
 
 .header-heading {
   color: #f7931e;
