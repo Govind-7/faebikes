@@ -18,7 +18,7 @@ const Login = () => {
     const name = a.value;
     setUsername(name);
 
-    const loginUrl = "http://localhost:5000/api/login";
+    const loginUrl = "https://faebikes.onrender.com/api/login";
     const userdetails = {
       email: name,
     };
@@ -41,7 +41,7 @@ const Login = () => {
   const verifyOtp = async (event) => {
     event.preventDefault();
     const otp = document.getElementById("otpid");
-    const url = "http://localhost:5000/api/verify";
+    const url = "https://faebikes.onrender.com/api/verify";
 
     const userdetails = {
       otp: otp.value,
